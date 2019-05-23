@@ -81,21 +81,33 @@ public class RegisterTwoAct extends AppCompatActivity {
 
                 //validasi untuk file
                 if (photo_location != null){
-                    StorageReference storageReference = storage.child(System.currentTimeMillis()+"."+photo_location);
+                    final StorageReference storageReference = storage.child(System.currentTimeMillis()+"."+photo_location);
                     storageReference.putFile(photo_location).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            String uri_photo = taskSnapshot.getStorage().getDownloadUrl().toString();
-                            reference.getRef().child("url_photo_profile").setValue(uri_photo);
-                            reference.getRef().child("namalengkap").setValue(nama_lengkap.getText().toString());
-                            reference.getRef().child("bio").setValue(bio.getText().toString());
+                            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    String uri_photo = uri.toString();
+                                    reference.getRef().child("url_photo_profile").setValue(uri_photo);
+                                    reference.getRef().child("namalengkap").setValue(nama_lengkap.getText().toString());
+                                    reference.getRef().child("bio").setValue(bio.getText().toString());
+                                }
+                            }).addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    Intent gotosucces = new Intent(RegisterTwoAct.this, SuccessRegisterAct.class);
+                                    startActivity(gotosucces);
+
+                                }
+                            });
 
                         }
                     }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            Intent gotosucces = new Intent(RegisterTwoAct.this, SuccessRegisterAct.class);
-                            startActivity(gotosucces);
+                            //Intent gotosucces = new Intent(RegisterTwoAct.this, SuccessRegisterAct.class);
+                            //startActivity(gotosucces);
                         }
                     });
 

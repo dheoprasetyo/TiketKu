@@ -72,7 +72,7 @@
                     android:id="@+id/photo_home_user"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/dheo"
+                    android:src="@drawable/icon_nopic"
 
                     />
             </com.github.florent37.shapeofview.shapes.CircleView>
@@ -200,6 +200,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/btn_ticket_torri"
                         android:layout_width="8dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -224,6 +225,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/btn_ticket_pagoda"
                         android:layout_width="8dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -254,6 +256,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:id="@+id/btn_ticket_candi"
                         android:layout_width="8dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -278,6 +281,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/btn_ticket_sphink"
                         android:layout_width="8dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -302,6 +306,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/btn_ticket_monas"
                         android:layout_width="8dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

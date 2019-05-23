@@ -80,11 +80,15 @@ public class SignInAct extends AppCompatActivity {
 
                             }else{
                                 Toast.makeText(getApplicationContext(), "Password Salah", Toast.LENGTH_SHORT).show();
+                                btn_sign_in.setEnabled(true);
+                                btn_sign_in.setText("SIGN IN");
                             }
 
 
                         }else{
                             Toast.makeText(getApplicationContext(), "Username Salah", Toast.LENGTH_SHORT).show();
+                            btn_sign_in.setEnabled(true);
+                            btn_sign_in.setText("SIGN IN");
                         }
                     }
 
