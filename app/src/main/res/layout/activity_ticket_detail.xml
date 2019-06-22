@@ -110,7 +110,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/photo_spot_ticket"
+                    android:id="@+id/nama_wisata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 

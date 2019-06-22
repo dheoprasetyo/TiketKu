@@ -95,7 +95,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/photo_spot_ticket"
+                    android:id="@+id/nama_wisata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -105,6 +105,7 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/lokasi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -122,21 +123,25 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btnmines"
                     android:layout_width="25dp"
                     android:layout_height="35dp"
                     android:background="@drawable/btnmines" />
 
                 <TextView
+                    android:id="@+id/textjumlahtiket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:fontFamily="@font/mregular"
-                    android:text="2"
+                    android:text="1"
                     android:textColor="@color/blackPirmary"
                     android:textSize="18sp" />
 
                 <Button
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/btnplus"
                     android:layout_width="25dp"
                     android:layout_height="28dp"
                     android:background="@drawable/btnpls" />
@@ -146,7 +151,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/short_tos_ticket"
+            android:id="@+id/ketentuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -201,12 +206,13 @@
             android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/textmybalance"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mmedium"
-                android:text="Rp 1.000 "
+                android:text="Rp 0 "
                 android:textColor="@color/bluePrimary"
                 android:textSize="16sp" />
 
@@ -235,12 +241,13 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/texttotoalharga"
                 android:layout_marginLeft="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/mmedium"
-                android:text="Rp 500 "
+                android:text="Rp 0 "
                 android:textColor="@color/greenPrimary"
                 android:textSize="32sp" />
 
@@ -284,5 +291,16 @@
             android:layout_height="28dp"
             android:src="@drawable/ic_back" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/notice_balance"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="48dp"
+        android:src="@drawable/icon_tidak_cukup_uang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    
 
 </android.support.constraint.ConstraintLayout>
