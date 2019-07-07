@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/app_title">
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
 
                     android:fontFamily="@font/mregular"
-                    android:text="Menara Pisa"
+
                     android:textColor="@color/blackPirmary"
                     android:textSize="16sp" />
 
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/mlight"
-                    android:text="Pisa City, Italy"
+
                     android:textColor="@color/grayPirmary"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -157,7 +157,6 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/mlight"
             android:lineSpacingExtra="8dp"
-            android:text="Anak yang berumur lebih dari 3 tahun wajib beli tiket"
             android:textColor="@color/grayPirmary"
             android:textSize="18sp" />
 
@@ -241,7 +240,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/texttotoalharga"
+                android:id="@+id/texttotalharga"
                 android:layout_marginLeft="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
